@@ -3,7 +3,7 @@ Sample environment recipes for [comfycli](https://github.com/richinsley/comfycli
 
 ## Installation
 ```bash
-comfycli env pull recipes https://github.com/richinsley/comfycli-sample-recipes.git
+comfycli env pullrecipes https://github.com/richinsley/comfycli-sample-recipes.git
 ```
 
 ## Usage
