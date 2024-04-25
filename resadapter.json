@@ -4,7 +4,7 @@
     "reference": "https://github.com/jiaxiangc/ComfyUI-ResAdapter?tab=readme-ov-file",
     "version": "1.0",
     "recipe_format": "1.0",
-    "inherits": ["SD15,SDXL"],
+    "inherits": ["SD15","SDXL"],
     "models": [
         {
             "name": "resadapter_v1_sd1.5 model",
