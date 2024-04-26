@@ -10,6 +10,16 @@
           "name": "ComfyUI-AnimateDiff-Evolved",
           "git_url": "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved.git",
           "branch": "main"
+        },
+        {
+          "name": "ComfyUI-VideoHelperSuite.",
+          "git_url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git",
+          "branch": "main"
+        },
+        {
+          "name": "ComfyUI_FizzNodes",
+          "git_url": "https://github.com/FizzleDorf/ComfyUI_FizzNodes.git",
+          "branch": "main"
         }
     ],
     "models": [
