@@ -1,5 +1,5 @@
 {
-    "name": "SDXL_lightning",
+    "name": "comfycli-sample-recipes/SDXL_lightning",
     "description": "SDXL Lightning Lora",
     "reference": "https://huggingface.co/ByteDance/SDXL-Lightning",
     "version": "1.0",

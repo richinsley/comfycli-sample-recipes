@@ -1,5 +1,5 @@
 {
-    "name": "controlnet_SDXL",
+    "name": "comfycli-sample-recipes/controlnet_SDXL",
     "description": "ControlNet v1-1 SDXL",
     "reference": "https://huggingface.co/stabilityai/control-lora",
     "version": "1.0",

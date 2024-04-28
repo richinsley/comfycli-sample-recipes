@@ -1,5 +1,5 @@
 {
-    "name": "controlnet_SD15",
+    "name": "comfycli-sample-recipes/controlnet_SD15",
     "description": "ControlNet v1-1 SD 1.5",
     "reference": "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors",
     "version": "1.0",

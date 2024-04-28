@@ -1,5 +1,5 @@
 {
-    "name": "resadapter",
+    "name": "comfycli-sample-recipes/resadapter",
     "description": "ResAdapter",
     "reference": "https://github.com/jiaxiangc/ComfyUI-ResAdapter?tab=readme-ov-file",
     "version": "1.0",

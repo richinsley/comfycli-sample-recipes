@@ -1,0 +1,127 @@
+{
+    "name": "comfycli-sample-recipes/multiple_image_to_video",
+    "description": "This workflow involves loading multiple images, creatively inserting frames through the Steerable Motion custom node, and converting them into silky transition videos using Animatediff LCM.",
+    "reference": "https://openart.ai/workflows/xiongmu/multiple-image-to-video-smoothness/BSpP3gqhc4sAFDxErIzs",
+    "version": "1.0",
+    "recipe_format": "1.0",
+    "inherits": ["comfycli-sample-recipes/animatediff","comfycli-sample-recipes/controlnet_SD15","comfycli-sample-recipes/controlnet_SDXL", "comfycli-sample-recipes/ipadapter_v2"],
+    "custom_nodes": [
+        {
+          "name": "ComfyUI-Impact-Pack",
+          "git_url": "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git",
+          "branch": "main"
+        },
+        {
+            "name": "ComfyUI-Frame-Interpolation",
+            "git_url": "https://github.com/Fannovel16/ComfyUI-Frame-Interpolation.git",
+            "branch": "main"
+        },
+        {
+            "name": "ComfyUI_ADV_CLIP_emb",
+            "git_url": "https://github.com/BlenderNeko/ComfyUI_ADV_CLIP_emb.git",
+            "branch": "main"
+        },
+        {
+            "name": "ComfyUI_Comfyroll_CustomNodes",
+            "git_url": "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git",
+            "branch": "main"
+        },
+        {
+            "name": "ComfyUI-Advanced-ControlNet",
+            "git_url": "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet.git",
+            "branch": "main"
+        },
+        {
+            "name": "rgthree-comfy",
+            "git_url": "https://github.com/rgthree/rgthree-comfy.git",
+            "branch": "main"
+        },
+        {
+            "name": "steerable-motion",
+            "git_url": "https://github.com/banodoco/steerable-motion.git",
+            "branch": "main"
+        },
+        {
+            "name": "ComfyUI-sampler-lcm-alternative",
+            "git_url": "https://github.com/jojkaart/ComfyUI-sampler-lcm-alternative.git",
+            "branch": "main"
+        },
+        {
+            "name": "Derfuu_ComfyUI_ModdedNodes",
+            "git_url": "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git",
+            "branch": "main"
+        }
+    ],
+    "models": [
+        {
+            "name": "DreamShaper - V∞!",
+            "type": "checkpoint",
+            "base": "SD1.x",
+            "save_path": "checkpoint/SD15",
+            "description": "DreamShaper started as a model to have an alternative to MidJourney in the open source world.",
+            "reference": "https://civitai.com/models/4384?modelVersionId=128713",
+            "filename": "dreamshaper_8.safetensors",
+            "url": "https://civitai.com/api/download/models/128713"
+        },
+        {
+            "name": "animatediff/v3_sd15_mm.ckpt (ComfyUI-AnimateDiff-Evolved) (Updated path)",
+            "type": "lora",
+            "base": "SD1.x",
+            "save_path": "loras/IPA",
+            "description": "Kosinkadink/ComfyUI-AnimateDiff-Evolved extension node.",
+            "reference": "https://huggingface.co/guoyww/animatediff",
+            "filename": "v3_sd15_adapter.ckpt",
+            "url": "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt"
+        },
+        {
+            "name": "more_details lora",
+            "type": "lora",
+            "base": "SD1.x",
+            "save_path": "loras/SD15",
+            "description": "Add More Details - Detail Enhancer / Tweaker",
+            "reference": "https://civitai.com/models/82098/add-more-details-detail-enhancer-tweaker-lora",
+            "filename": "more_details.safetensors",
+            "url": "https://civitai.com/api/download/models/87153"
+        },
+        {
+            "name": "AnimateLCM_sd15_t2v_lora.safetensors",
+            "type": "lora",
+            "base": "SD1.x",
+            "save_path": "loras/AD",
+            "description": "Animatediff LCM SD15 t2v lora",
+            "reference": "https://huggingface.co/wangfuyun/AnimateLCM/tree/main",
+            "filename": "AnimateLCM_sd15_t2v_lora.safetensors",
+            "url": "https://huggingface.co/wangfuyun/AnimateLCM/resolve/main/AnimateLCM_sd15_t2v_lora.safetensors"
+        },
+        {
+            "name": "AnimateLCM_sd15_t2v_lora.safetensors",
+            "type": "lora",
+            "base": "SD1.x",
+            "save_path": "loras/AD",
+            "description": "Animatediff LCM SD15 t2v lora",
+            "reference": "https://huggingface.co/wangfuyun/AnimateLCM/tree/main",
+            "filename": "AnimateLCM_sd15_t2v_lora.safetensors",
+            "url": "https://huggingface.co/wangfuyun/AnimateLCM/resolve/main/AnimateLCM_sd15_t2v_lora.safetensors"
+        },
+        {
+            "name": "AnimateLCM_sd15_t2v",
+            "type": "checkpoint",
+            "base": "SD1.x",
+            "save_path": "animatediff_models",
+            "description": "Animatediff LCM SD15 t2v checkpoint",
+            "reference": "https://huggingface.co/wangfuyun/AnimateLCM/tree/main",
+            "filename": "AnimateLCM_sd15_t2v.ckpt",
+            "url": "https://huggingface.co/wangfuyun/AnimateLCM/resolve/main/AnimateLCM_sd15_t2v.ckpt"
+        },
+        {
+            "name": "v3_sd15_sparsectrl_scribble.",
+            "type": "controlnet",
+            "base": "SD1.x",
+            "save_path": "default",
+            "description": "Animatediff sparsectlr scribble",
+            "reference": "https://github.com/guoyww/animatediff/",
+            "filename": "v3_sd15_sparsectrl_scribble.ckpt",
+            "url": "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_sparsectrl_scribble.ckpt"
+        }
+    ]
+}

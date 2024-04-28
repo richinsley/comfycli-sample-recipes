@@ -1,5 +1,5 @@
 {
-    "name": "ipadapter_v2",
+    "name": "comfycli-sample-recipes/ipadapter_v2",
     "description": "IPAdapter v2 models for SD1.5 and SDXL",
     "reference": "https://huggingface.co/h94/IP-Adapter",
     "version": "1.0",
