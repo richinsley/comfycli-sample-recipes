@@ -9,7 +9,7 @@
         {
           "name": "ComfyUI-Impact-Pack",
           "git_url": "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git",
-          "branch": "main"
+          "branch": "Main"
         },
         {
             "name": "ComfyUI-Frame-Interpolation",
