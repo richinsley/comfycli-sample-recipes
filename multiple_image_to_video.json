@@ -19,7 +19,7 @@
         {
             "name": "ComfyUI_ADV_CLIP_emb",
             "git_url": "https://github.com/BlenderNeko/ComfyUI_ADV_CLIP_emb.git",
-            "branch": "main"
+            "branch": "master"
         },
         {
             "name": "ComfyUI_Comfyroll_CustomNodes",
